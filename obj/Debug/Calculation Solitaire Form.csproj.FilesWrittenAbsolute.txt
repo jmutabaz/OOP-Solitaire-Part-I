@@ -1,0 +1,16 @@
+/Users/johnniecris/Desktop/WindowsFormsApplication2/WindowsFormsApplication2/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/johnniecris/Desktop/WindowsFormsApplication2/WindowsFormsApplication2/obj/Debug/WindowsFormsApplication2.CalculationMenu.resources
+/Users/johnniecris/Desktop/WindowsFormsApplication2/WindowsFormsApplication2/obj/Debug/WindowsFormsApplication2.CalculationGame.resources
+/Users/johnniecris/Desktop/WindowsFormsApplication2/WindowsFormsApplication2/obj/Debug/WindowsFormsApplication2.Properties.Resources.resources
+/Users/johnniecris/Desktop/WindowsFormsApplication2/WindowsFormsApplication2/bin/Debug/WindowsFormsApplication2.exe.mdb
+/Users/johnniecris/Desktop/WindowsFormsApplication2/WindowsFormsApplication2/bin/Debug/WindowsFormsApplication2.exe
+/Users/johnniecris/Desktop/WindowsFormsApplication2/WindowsFormsApplication2/obj/Debug/WindowsFormsApplication2.exe
+/Users/johnniecris/Desktop/WindowsFormsApplication2/WindowsFormsApplication2/obj/Debug/WindowsFormsApplication2.exe.mdb
+/Users/johnniecris/Desktop/WindowsFormsApplication2/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/johnniecris/Desktop/WindowsFormsApplication2/obj/Debug/WindowsFormsApplication2.CalculationMenu.resources
+/Users/johnniecris/Desktop/WindowsFormsApplication2/obj/Debug/WindowsFormsApplication2.CalculationGame.resources
+/Users/johnniecris/Desktop/WindowsFormsApplication2/obj/Debug/WindowsFormsApplication2.Properties.Resources.resources
+/Users/johnniecris/Desktop/WindowsFormsApplication2/bin/Debug/WindowsFormsApplication2.exe.mdb
+/Users/johnniecris/Desktop/WindowsFormsApplication2/bin/Debug/WindowsFormsApplication2.exe
+/Users/johnniecris/Desktop/WindowsFormsApplication2/obj/Debug/WindowsFormsApplication2.exe
+/Users/johnniecris/Desktop/WindowsFormsApplication2/obj/Debug/WindowsFormsApplication2.exe.mdb
