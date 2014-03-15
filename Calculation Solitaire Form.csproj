@@ -158,6 +158,7 @@
     <Compile Include="Deck.cs" />
     <Compile Include="DiscardPile.cs" />
     <Compile Include="WastePile.cs" />
+    <None Include="zmisc.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -171,7 +172,4 @@
   </Target>
   -->
   <ItemGroup />
-  <ItemGroup>
-    <None Include="1.gif" />
-  </ItemGroup>
 </Project>

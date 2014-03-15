@@ -13,7 +13,6 @@ namespace WindowsFormsApplication2
 		{
 			cardList = new List<Cards> ();
 		}
-
 		/* <summary>
 		 * Bool isEmpty method <br>
 		 * Returns a count of 0
@@ -57,12 +56,11 @@ namespace WindowsFormsApplication2
 		}
 
 		/* <summary>
-		 * Removes the top face card and deals the next
+		 * Removes the top face card from the list
 		 * </summary>
 		 */
 		public void removetopFaceUpCard()
 		{
-			//remove at first index
 			if(!isEmpty())
 				cardList.RemoveAt(cardList.Count - 1);
 		}
@@ -74,7 +72,7 @@ namespace WindowsFormsApplication2
 		 */
 		public void acceptCard(Cards card)
 		{
-			if (cardList.Count != 0) {
+			if (!isEmpty()) {
 				cardList.Insert (0, card);
 			}
 			acceptCard(card);

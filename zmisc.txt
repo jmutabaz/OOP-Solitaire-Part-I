@@ -1,88 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections;
-
-namespace WindowsFormsApplication2
-{
-	public class Deck
-	{
-		private List<Cards> cardsToBeShuffled;
-		//to be evaluated at run time rather than compile-time
-		public readonly int FINITE_MAX_LENGTH = 52; 
-
-		public Deck ()
-		{
-			//default constructor
-			//deck is empty
-			cardsToBeShuffled = new List<Cards> ();
-		}
-
-		public bool isEmpty ()
-		{
-			return cardsToBeShuffled.Count == 0;
-		}
-
-		public void AddCard (Cards card)
-		{
-			//if (cardList.Count == 0) {
-			cardsToBeShuffled.Add (card);
-			//} else {
-			//	throw new NotImplementedException ();
-			//}
-		}
-
-		/* <summary>
-		 * Deals a card
-		 * removes a card at the first index <br>
-		 * then shuffles the cards
-		 * </summary>
-		*/
-		public void dealACard ()
-		{
-			//Cards card = cardsToBeShuffled[0];
-
-			cardsToBeShuffled.RemoveAt (0);
-			Shuffle (cardsToBeShuffled);
-			//am going too add my shuffling method once done
-			//return card;
-		} 
-
-		
-		public void moveToDiscardPile()
-		{
-			//don't know how to implement moving to discard file
-			//don't i need to implement positions as well to be 
-			//able to move the cards?
-		}
-
-		/* <summary>
-		 * Adds to the pile and shuffles the deck <br>
-		 * I am using the fisher-yates algorithm <br>
-		 * to ensure no repitition of the same instance
-		 * </summary>
-		 */
-
-		public void shuffleDeck(){
-			Random rand = new Random ();
-			int count = 1;
-			int cardNum;
-			Cards card;
-			//int[] arr = new int[52];
-			do {
-				cardNum = rand.Next (1, 52);
-				card = new Cards (cardNum + ".gif");
-                if (isEmpty())
-                {
-					AddCard(card);
-                }
-                else
-                {
-                    ; //do nothing
-                }
-			} while(count <= 52);
-			//Use fisher-Yates to ensure no duplicates of the same card instance
-			Shuffle(cardsToBeShuffled);
-		}
+﻿from deck class
 
 		/*
         public static void shuffleDeck(List<string>shuffleCards)
@@ -148,20 +64,9 @@ namespace WindowsFormsApplication2
             Shuffle (shuffleCards);
         } 
 		*/
-		public static void Shuffle<T>(List<T> listToShuffle)
-        {
-			//fisher yates algorithm. Ensures no duplicates
-			Random rand = new Random();
-			int n = listToShuffle.Count;
-			while (n > 1) {
-				n--;
-				int k = rand.Next (n + 1);
-				T value = listToShuffle [k];
-				listToShuffle [k] = listToShuffle [n];
-				listToShuffle [n] = value;
-			}
 
-			//List<CardList> shuffle = this.Cards;
+
+		//List<CardList> shuffle = this.Cards;
             //this.Cards = new CardList[shuffle.length];
 
             //fisher yates algorithm. Ensures no duplicates
@@ -172,8 +77,4 @@ namespace WindowsFormsApplication2
 			//  array [j] = array [i - 1];
 			//  array [i - 1] = tmp;
 			//}
-
-        }
-	}
-}
 

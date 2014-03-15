@@ -1,13 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CalculationMenu.cs">
     <Files>
       <File FileName="FoundationPile.cs" Line="1" Column="1" />
-      <File FileName="Pile.cs" Line="1" Column="1" />
-      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="14" Column="20" />
       <File FileName="Tableau.cs" Line="1" Column="1" />
-      <File FileName="CalculationGame.cs" Line="43" Column="10" />
-      <File FileName="CalculationMenu.cs" Line="1" Column="1" />
+      <File FileName="CalculationGame.cs" Line="1" Column="1" />
+      <File FileName="CalculationMenu.cs" Line="43" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

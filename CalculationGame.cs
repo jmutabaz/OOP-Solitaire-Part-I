@@ -14,7 +14,7 @@ namespace WindowsFormsApplication2
     { 
 		//instantiate classes
 		Cards cards = new Cards();
-		CardList cardList = new CardList();
+		CardList cList = new CardList();
 		Deck deck = new Deck();
 		HintPile hPile = new HintPile();
 		WastePile wPile = new WastePile();
@@ -146,8 +146,8 @@ namespace WindowsFormsApplication2
 
 
 
-                     Bitmap image1 = (Bitmap)Image.FromFile(@"C:\Users\alxph_000\Desktop\WindowsFormsApplication2\cards\1.gif", true);
-                     wastePilePicture.BackgroundImage = image1;
+				Bitmap image1 = (Bitmap)Image.FromFile(@"C:\Users\alxph_000\Desktop\WindowsFormsApplication2\cards\1.gif", true);
+				wastePilePicture.BackgroundImage = image1;
 
 
 
