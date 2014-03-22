@@ -28,3 +28,13 @@ C:\Users\alxph_000\Desktop\WindowsFormsApplication2\obj\Debug\WindowsFormsApplic
 C:\Users\alxph_000\Desktop\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.CalculationGame.resources
 C:\Users\alxph_000\Desktop\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
 C:\Users\alxph_000\Desktop\WindowsFormsApplication2\obj\Debug\Calculation Solitaire Form.csproj.GenerateResource.Cache
+C:\Users\John\Documents\Visual Studio 2012\Projects\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplication2.CalculationMenu.resources
+C:\Users\John\Documents\Visual Studio 2012\Projects\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplication2.CalculationGame.resources
+C:\Users\John\Documents\Visual Studio 2012\Projects\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\John\Documents\Visual Studio 2012\Projects\OOP-Solitaire-Part-I\obj\Debug\Calculation Solitaire Form.csproj.GenerateResource.Cache
+C:\Users\John\Documents\Visual Studio 2012\Projects\OOP-Solitaire-Part-I\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\John\Documents\Visual Studio 2012\Projects\OOP-Solitaire-Part-I\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\John\Documents\Visual Studio 2012\Projects\OOP-Solitaire-Part-I\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\John\Documents\Visual Studio 2012\Projects\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\John\Documents\Visual Studio 2012\Projects\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\John\Documents\Visual Studio 2012\Projects\OOP-Solitaire-Part-I\obj\Debug\Calculation Solitaire Form.csprojResolveAssemblyReference.cache

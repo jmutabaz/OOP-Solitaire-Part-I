@@ -63,9 +63,21 @@ namespace WindowsFormsApplication2
 		 */ 
 		public override Cards dealACard ()
 		{
-			Cards card = pile [0];
-			pile.RemoveAt (0);
-			return card;
+      if (!isEmpty())
+      {
+        throw new Exception("There are currently no cards available. "
+                                + "Please add a card to continue");
+      }
+      else
+      {
+        Cards card = pile[0];
+        pile.RemoveAt(0);
+        return card;
+      }
+      
+      //Cards card = pile [0];
+			//pile.RemoveAt (0);
+			//return card;
 		}
 
 		public override void acceptCard(Cards card)

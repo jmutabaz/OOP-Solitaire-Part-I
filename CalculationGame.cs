@@ -12,26 +12,21 @@ namespace WindowsFormsApplication2
 {
     public partial class CalculationGame : Form
     { 
-		//instantiate classes
-		Cards cards = new Cards();
-		CardList cList = new CardList();
-		Deck deck = new Deck();
-		HintPile hPile = new HintPile();
-		WastePile wPile = new WastePile();
-		FoundationPile fPile = new FoundationPile();
-		DiscardPile dPile = new DiscardPile();
+		  //instantiate classes
+		  Cards cards = new Cards();
+		  CardList cList = new CardList();
+		  Deck deck = new Deck();
+		  HintPile hPile = new HintPile();
+		  WastePile wPile = new WastePile();
+		  FoundationPile fPile = new FoundationPile();
+		  DiscardPile dPile = new DiscardPile();
 
-		private int _ticks;
+		    private int _ticks;
 
         public CalculationGame()
         {
             InitializeComponent();
             timer1.Start(); 
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -51,13 +46,22 @@ namespace WindowsFormsApplication2
             this.Text = "Calculation Solitaire"; 
         }
 
-        private void Rules_Game_Click(object sender, EventArgs e)
+        private void btnAuthors_onClick(object sender, EventArgs e)
         {
-            MessageBox.Show("How To Play Calculation Solitaire" + "\n" +
-                            "Rules:" + "\n" +
-                            "1) Don't lose" + "\n" +
-                            "2) Dont be afraid to stack" + "\n" +
-                            "..........."); 
+          MessageBox.Show("John Mutabazi, Nicholas Allen, Andrew Witworth "
+                         + "\nJason Horn, and Richard Phelps");
+        }
+        
+        private void btnRules_onClick(object sender, EventArgs e)
+        {
+          MessageBox.Show("1. First Locate and remove an Ace, two, three " 
+                        + "and four card from the deck and deal them " 
+                        + "onto the foundations face-up."
+                        + "\n2. Pick one card from the deck at a time and "
+                        + "add it to one of the foundations if possible. " 
+                        + "\nIf you can't add it to the foundation, place " 
+                        + "the card on one fo the four waste piles below the "
+                        + "\foundations");
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -77,7 +81,16 @@ namespace WindowsFormsApplication2
 
         private void CalculationGame_Load(object sender, EventArgs e)
         {
-
+          foreach(string s in System.IO.Directory.GetFiles(System.IO.Path.GetFullPath("../cards/")))
+          {
+            if (!s.ToLower().Contains("Thumbs.db".ToLower()))
+            { 
+              string fileName = System.IO.Path.GetFileName(s);
+              deck.AddCard(new Cards(fileName));
+            }
+          }
+          //testing to see how many cards
+          MessageBox.Show("There are currently " + deck.getCount().ToString() + " cards on the deck");
         }
 
         private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
@@ -86,22 +99,15 @@ namespace WindowsFormsApplication2
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //deck 
-			/*
-            Cards cards = new Cards();
-            cards.getCardName();
-            cards.getDescription();
-            cardList.AddCard (cards);
-			*/
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void btnDiscardPile_Click(object sender, EventArgs e)
         {
             //waste pile
         }
 
-        private void deckPicutre_Click(object sender, EventArgs e)
+        private void btnDeckPicutre_Click(object sender, EventArgs e)
         {
             
             //this.Click = click;
@@ -112,62 +118,77 @@ namespace WindowsFormsApplication2
 
          void control_Click(object sender, EventArgs e)
          {
-             throw new NotImplementedException();
-             Image newImage = Image.FromFile("1.gif");
+             //throw new NotImplementedException();
+             //Image newImage = Image.FromFile("1.gif");
              
-             wastePilePicture.BackgroundImage= newImage;
+             //wastePilePicture.BackgroundImage= newImage;
              
              
          }
 
-         private void DeckButton_Click_1(object sender, EventArgs e)
-         {
-             //Control control = DeckButton;
-             // Set the text and backcolor of the parent control
-            // control.BackColor = Color.Black;
-             // Get the form that the Button control is contained within.
-             //Form fm = DeckButton.FindForm();
-            // control.Click += control_Click;
-             string name, number, suit,  color;
-             Boolean faceUp;
-             //name = "C:/Users/alxph_000/Desktop/WindowsFormsApplication2/cards/12.gif";
-             name = "1.gif";
-             if (name == "1.gif") {
-				//A of clubs - black
-				number = "A";
-				color = "black";
-				suit = "club";
-				faceUp = false;
-			}
-             //Image newImage = Image.FromFile("card/1.gif");
-            
-                 try
-                 {
-
-
-
-				Bitmap image1 = (Bitmap)Image.FromFile(@"C:\Users\alxph_000\Desktop\WindowsFormsApplication2\cards\1.gif", true);
-				wastePilePicture.BackgroundImage = image1;
-
-
-
-                 }
-                 catch (System.IO.FileNotFoundException)
-                 {
-                     MessageBox.Show("There was an error opening the bitmap." +
-                         "Please check the path.");
-                 }
-
-                 //wastePilePicture.BackgroundImage = newImage;
-             
-
-
-            
+         private void btnDeck_Click(object sender, EventArgs e)
+         { 
+            Random rand = new Random();   
+            int r = rand.Next(deck.getCount());
+            Cards card = deck.getCard(r-1);
+            dPile.AddToPile(card);
+            deck.removeCard(card);
+            Bitmap image1 = (Bitmap)Image.FromFile(System.IO.Path.GetFullPath("../cards/" + card.getCardName()), true);
+            wastePilePicture.BackgroundImage = image1;
          }
 
-         private void pictureBox3_Click_1(object sender, EventArgs e)
+         private void btnFoundPile1_Click_1(object sender, EventArgs e)
          {
 
          }
+
+         private void btnFoundPile2_Click(object sender, EventArgs e)
+         {
+
+         }
+
+         private void btnFoundPile3_Click(object sender, EventArgs e)
+         {
+
+         }
+
+         private void btnFoundPile4_Click(object sender, EventArgs e)
+         {
+
+         }
+         
+         private void pictureBox5_Click(object sender, EventArgs e)
+         {
+
+         }
+
+
+         private void hintPile1_Click(object sender, EventArgs e)
+         {
+           
+           MessageBox.Show("A 2 3 4 5 6 7"
+                          + "\n8 9 10 J Q K");
+           
+         }
+
+         private void hintPile2_Click(object sender, EventArgs e)
+         {
+           //this is the hintPile1_Click pile
+           MessageBox.Show("2 4 6 8 10 Q"
+                          + "\nA 3 5 7 9 J K");
+         }
+
+         private void hintPile3_Click(object sender, EventArgs e)
+         {
+           MessageBox.Show("3 6 9 Q 2 5 8"
+                          + "\nJ A 4 7 10 K");
+         }
+
+         private void hintPile4_Click(object sender, EventArgs e)
+         {
+           //MessageBox.Show = "click here for hint";
+
+         }
+
     }
 }

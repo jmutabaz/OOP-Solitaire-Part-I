@@ -30,39 +30,61 @@ namespace WindowsFormsApplication2
 		 */ 
 		public void AddCard (Cards card)
 		{
-			//if (cardList.Count == 0) {
 			cardList.Add (card);
-			//} else {
-			//	throw new NotImplementedException ();
-			//}
+			
 		}
 
 		/* <summary>
 		 * Get the bottom face up card
 		 * </summary>
 		 */ 
-		public Cards getBottomFaceUp(Cards c)
+		public Cards getBottomFaceUp(Cards card)
 		{
-			return cardList[0];
+      if (!isEmpty())
+      {
+        throw new Exception("There are currently no cards available. "
+                                + "Please add a card to continue");
+      }
+      else
+      {
+        AddCard(card);
+      }
+      return cardList[0];
 		}
 
 		/* <summary>
 		 * Get the top face up card
 		 * </summary>
 		 */
-		public Cards getTopFaceUp(Cards c)
+		public Cards getTopFaceUp(Cards card)
 		{
-			return cardList[cardList.Count - 1];
+      if (!isEmpty())
+      {
+        throw new Exception("There are currently no cards available. "
+                                + "Please add a card to continue");
+      }
+      else
+      {
+        AddCard(card);
+      }
+      return cardList[cardList.Count - 1];
 		}
 
 		/* <summary>
 		 * Removes the top face card from the list
 		 * </summary>
 		 */
-		public void removetopFaceUpCard()
+		public void removeBottomFaceUpCard()
 		{
-			if(!isEmpty())
-				cardList.RemoveAt(cardList.Count - 1);
+      if (!isEmpty())
+      {
+        throw new Exception("There are currently no cards available. "
+                                + "Please add a card to continue");
+      }
+      else
+      {
+        cardList.RemoveAt(0);
+      }
 		}
 		/* <summary>
 		 * This method will accept a card <br>
@@ -75,7 +97,6 @@ namespace WindowsFormsApplication2
 			if (!isEmpty()) {
 				cardList.Insert (0, card);
 			}
-			acceptCard(card);
 		}
 
 		/* <summary>
@@ -86,7 +107,6 @@ namespace WindowsFormsApplication2
 		{
 			return cardList.Count;
 		}
-
 
 	}
 }

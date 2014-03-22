@@ -63,9 +63,16 @@ namespace WindowsFormsApplication2
 		public override Cards dealACard ()
 		{
 			//you guys can decide here if to check its empty
-			Cards card = pile [0];
-			pile.RemoveAt (0);
-			return card;
+      if (isEmpty())
+      {
+        throw new Exception(" No cards in the list");
+      }
+      else
+      {
+        Cards card = pile[0];
+        pile.RemoveAt(0);
+        return card;
+      }
 		}
 
 		public override void acceptCard(Cards card)

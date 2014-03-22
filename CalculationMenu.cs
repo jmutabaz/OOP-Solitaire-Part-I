@@ -32,7 +32,6 @@ namespace WindowsFormsApplication2
             String[] suits = { "Spades", "Hearts", "Clubs", "Diamonds" };
             String[] ranks = { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
 
-           // for (int i =
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -71,7 +70,7 @@ namespace WindowsFormsApplication2
                             "Rules:" + "\n" + 
                             "1) Don't lose" + "\n" + 
                             "2) Dont be afraid to stack" + "\n" +
-                            "..........."); 
+                            "3) Now click on 'Start' and show us your ninja skills"); 
         }
     }
 

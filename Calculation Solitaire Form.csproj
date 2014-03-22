@@ -141,19 +141,6 @@
     <None Include="cards\7.gif" />
     <None Include="cards\8.gif" />
     <None Include="cards\9.gif" />
-    <None Include="cards\b1fh.gif" />
-    <None Include="cards\b1fv.gif" />
-    <None Include="cards\b1pb.gif" />
-    <None Include="cards\b1pl.gif" />
-    <None Include="cards\b1pr.gif" />
-    <None Include="cards\b1pt.gif" />
-    <None Include="cards\b2fh.gif" />
-    <None Include="cards\b2fv.gif" />
-    <None Include="cards\b2pb.gif" />
-    <None Include="cards\b2pl.gif" />
-    <None Include="cards\b2pr.gif" />
-    <None Include="cards\b2pt.gif" />
-    <None Include="cards\ec.gif" />
     <Compile Include="HintPile.cs" />
     <Compile Include="Deck.cs" />
     <Compile Include="DiscardPile.cs" />
@@ -171,5 +158,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\%24this.BackgroundImage.jpg" />
+  </ItemGroup>
 </Project>
