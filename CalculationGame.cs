@@ -156,11 +156,6 @@ namespace WindowsFormsApplication2
          {
 
          }
-         
-         private void pictureBox5_Click(object sender, EventArgs e)
-         {
-
-         }
 
 
          private void hintPile1_Click(object sender, EventArgs e)
@@ -187,6 +182,26 @@ namespace WindowsFormsApplication2
          private void hintPile4_Click(object sender, EventArgs e)
          {
            //MessageBox.Show = "click here for hint";
+
+         }
+
+         private void discardPile1_onClick(object sender, EventArgs e)
+         {
+
+         }
+
+         private void discardPile2_onClick(object sender, EventArgs e)
+         {
+
+         }
+
+         private void discardPile3_onClick(object sender, EventArgs e)
+         {
+
+         }
+
+         private void discardPile4_onClick(object sender, EventArgs e)
+         {
 
          }
 
