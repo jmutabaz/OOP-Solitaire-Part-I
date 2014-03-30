@@ -94,7 +94,6 @@
       // 
       // foundation4
       // 
-      this.foundation4.Image = ((System.Drawing.Image)(resources.GetObject("foundation4.Image")));
       this.foundation4.Location = new System.Drawing.Point(657, 109);
       this.foundation4.Margin = new System.Windows.Forms.Padding(2);
       this.foundation4.Name = "foundation4";
@@ -115,7 +114,6 @@
       // 
       // foundation2
       // 
-      this.foundation2.Image = ((System.Drawing.Image)(resources.GetObject("foundation2.Image")));
       this.foundation2.Location = new System.Drawing.Point(417, 109);
       this.foundation2.Margin = new System.Windows.Forms.Padding(2);
       this.foundation2.Name = "foundation2";
@@ -135,7 +133,6 @@
       // 
       // foundation3
       // 
-      this.foundation3.Image = ((System.Drawing.Image)(resources.GetObject("foundation3.Image")));
       this.foundation3.Location = new System.Drawing.Point(543, 109);
       this.foundation3.Margin = new System.Windows.Forms.Padding(2);
       this.foundation3.Name = "foundation3";
@@ -255,7 +252,6 @@
       // 
       // foundation1
       // 
-      this.foundation1.Image = ((System.Drawing.Image)(resources.GetObject("foundation1.Image")));
       this.foundation1.Location = new System.Drawing.Point(272, 109);
       this.foundation1.Name = "foundation1";
       this.foundation1.Size = new System.Drawing.Size(71, 96);
