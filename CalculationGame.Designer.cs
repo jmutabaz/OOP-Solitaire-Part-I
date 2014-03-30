@@ -32,11 +32,11 @@
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculationGame));
       this.discardPile3 = new System.Windows.Forms.PictureBox();
       this.discardPile4 = new System.Windows.Forms.PictureBox();
-      this.pictureBox7 = new System.Windows.Forms.PictureBox();
+      this.foundation4 = new System.Windows.Forms.PictureBox();
       this.discardPile2 = new System.Windows.Forms.PictureBox();
-      this.pictureBox4 = new System.Windows.Forms.PictureBox();
+      this.foundation2 = new System.Windows.Forms.PictureBox();
       this.wastePilePicture = new System.Windows.Forms.PictureBox();
-      this.pictureBox2 = new System.Windows.Forms.PictureBox();
+      this.foundation3 = new System.Windows.Forms.PictureBox();
       this.timer1 = new System.Windows.Forms.Timer(this.components);
       this.Rules_Game = new System.Windows.Forms.Button();
       this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -49,7 +49,7 @@
       this.rulesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.DeckButton = new System.Windows.Forms.Button();
       this.discardPile1 = new System.Windows.Forms.PictureBox();
-      this.pictureBox3 = new System.Windows.Forms.PictureBox();
+      this.foundation1 = new System.Windows.Forms.PictureBox();
       this.hintPile1 = new System.Windows.Forms.PictureBox();
       this.hintPile2 = new System.Windows.Forms.PictureBox();
       this.hintPile3 = new System.Windows.Forms.PictureBox();
@@ -58,14 +58,14 @@
       this.button1 = new System.Windows.Forms.Button();
       ((System.ComponentModel.ISupportInitialize)(this.discardPile3)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.discardPile4)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.foundation4)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.discardPile2)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.foundation2)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.wastePilePicture)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.foundation3)).BeginInit();
       this.toolStrip1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.discardPile1)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.foundation1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.hintPile1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.hintPile2)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.hintPile3)).BeginInit();
@@ -92,16 +92,16 @@
       this.discardPile4.TabStop = false;
       this.discardPile4.Click += new System.EventHandler(this.discardPile4_onClick);
       // 
-      // pictureBox7
+      // foundation4
       // 
-      this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-      this.pictureBox7.Location = new System.Drawing.Point(657, 109);
-      this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
-      this.pictureBox7.Name = "pictureBox7";
-      this.pictureBox7.Size = new System.Drawing.Size(71, 96);
-      this.pictureBox7.TabIndex = 17;
-      this.pictureBox7.TabStop = false;
-      this.pictureBox7.Click += new System.EventHandler(this.btnFoundPile4_Click);
+      this.foundation4.Image = ((System.Drawing.Image)(resources.GetObject("foundation4.Image")));
+      this.foundation4.Location = new System.Drawing.Point(657, 109);
+      this.foundation4.Margin = new System.Windows.Forms.Padding(2);
+      this.foundation4.Name = "foundation4";
+      this.foundation4.Size = new System.Drawing.Size(71, 96);
+      this.foundation4.TabIndex = 17;
+      this.foundation4.TabStop = false;
+      this.foundation4.Click += new System.EventHandler(this.btnFoundPile4_Click);
       // 
       // discardPile2
       // 
@@ -113,16 +113,16 @@
       this.discardPile2.TabStop = false;
       this.discardPile2.Click += new System.EventHandler(this.discardPile2_onClick);
       // 
-      // pictureBox4
+      // foundation2
       // 
-      this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-      this.pictureBox4.Location = new System.Drawing.Point(417, 109);
-      this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-      this.pictureBox4.Name = "pictureBox4";
-      this.pictureBox4.Size = new System.Drawing.Size(71, 96);
-      this.pictureBox4.TabIndex = 15;
-      this.pictureBox4.TabStop = false;
-      this.pictureBox4.Click += new System.EventHandler(this.btnFoundPile2_Click);
+      this.foundation2.Image = ((System.Drawing.Image)(resources.GetObject("foundation2.Image")));
+      this.foundation2.Location = new System.Drawing.Point(417, 109);
+      this.foundation2.Margin = new System.Windows.Forms.Padding(2);
+      this.foundation2.Name = "foundation2";
+      this.foundation2.Size = new System.Drawing.Size(71, 96);
+      this.foundation2.TabIndex = 15;
+      this.foundation2.TabStop = false;
+      this.foundation2.Click += new System.EventHandler(this.btnFoundPile2_Click);
       // 
       // wastePilePicture
       // 
@@ -132,18 +132,17 @@
       this.wastePilePicture.Size = new System.Drawing.Size(71, 96);
       this.wastePilePicture.TabIndex = 14;
       this.wastePilePicture.TabStop = false;
-      this.wastePilePicture.Click += new System.EventHandler(this.btnDiscardPile_Click);
       // 
-      // pictureBox2
+      // foundation3
       // 
-      this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-      this.pictureBox2.Location = new System.Drawing.Point(543, 109);
-      this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-      this.pictureBox2.Name = "pictureBox2";
-      this.pictureBox2.Size = new System.Drawing.Size(71, 96);
-      this.pictureBox2.TabIndex = 13;
-      this.pictureBox2.TabStop = false;
-      this.pictureBox2.Click += new System.EventHandler(this.btnFoundPile3_Click);
+      this.foundation3.Image = ((System.Drawing.Image)(resources.GetObject("foundation3.Image")));
+      this.foundation3.Location = new System.Drawing.Point(543, 109);
+      this.foundation3.Margin = new System.Windows.Forms.Padding(2);
+      this.foundation3.Name = "foundation3";
+      this.foundation3.Size = new System.Drawing.Size(71, 96);
+      this.foundation3.TabIndex = 13;
+      this.foundation3.TabStop = false;
+      this.foundation3.Click += new System.EventHandler(this.btnFoundPile3_Click);
       // 
       // timer1
       // 
@@ -254,15 +253,15 @@
       this.discardPile1.TabStop = false;
       this.discardPile1.Click += new System.EventHandler(this.discardPile1_onClick);
       // 
-      // pictureBox3
+      // foundation1
       // 
-      this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-      this.pictureBox3.Location = new System.Drawing.Point(272, 109);
-      this.pictureBox3.Name = "pictureBox3";
-      this.pictureBox3.Size = new System.Drawing.Size(71, 96);
-      this.pictureBox3.TabIndex = 24;
-      this.pictureBox3.TabStop = false;
-      this.pictureBox3.Click += new System.EventHandler(this.btnFoundPile1_Click_1);
+      this.foundation1.Image = ((System.Drawing.Image)(resources.GetObject("foundation1.Image")));
+      this.foundation1.Location = new System.Drawing.Point(272, 109);
+      this.foundation1.Name = "foundation1";
+      this.foundation1.Size = new System.Drawing.Size(71, 96);
+      this.foundation1.TabIndex = 24;
+      this.foundation1.TabStop = false;
+      this.foundation1.Click += new System.EventHandler(this.btnFoundPile1_Click_1);
       // 
       // hintPile1
       // 
@@ -330,7 +329,7 @@
       this.Controls.Add(this.hintPile3);
       this.Controls.Add(this.hintPile2);
       this.Controls.Add(this.hintPile1);
-      this.Controls.Add(this.pictureBox3);
+      this.Controls.Add(this.foundation1);
       this.Controls.Add(this.discardPile1);
       this.Controls.Add(this.DeckButton);
       this.Controls.Add(this.toolStrip1);
@@ -338,11 +337,11 @@
       this.Controls.Add(this.Rules_Game);
       this.Controls.Add(this.discardPile3);
       this.Controls.Add(this.discardPile4);
-      this.Controls.Add(this.pictureBox7);
+      this.Controls.Add(this.foundation4);
       this.Controls.Add(this.discardPile2);
-      this.Controls.Add(this.pictureBox4);
+      this.Controls.Add(this.foundation2);
       this.Controls.Add(this.wastePilePicture);
-      this.Controls.Add(this.pictureBox2);
+      this.Controls.Add(this.foundation3);
       this.HelpButton = true;
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.MainMenuStrip = this.menuStrip1;
@@ -353,15 +352,15 @@
       this.Load += new System.EventHandler(this.CalculationGame_Load);
       ((System.ComponentModel.ISupportInitialize)(this.discardPile3)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.discardPile4)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.foundation4)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.discardPile2)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.foundation2)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.wastePilePicture)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.foundation3)).EndInit();
       this.toolStrip1.ResumeLayout(false);
       this.toolStrip1.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.discardPile1)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.foundation1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.hintPile1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.hintPile2)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.hintPile3)).EndInit();
@@ -375,11 +374,11 @@
 
         private System.Windows.Forms.PictureBox discardPile3;
         private System.Windows.Forms.PictureBox discardPile4;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox foundation4;
         private System.Windows.Forms.PictureBox discardPile2;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox foundation2;
         private System.Windows.Forms.PictureBox wastePilePicture;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox foundation3;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button Rules_Game;
         private System.Windows.Forms.ToolStrip toolStrip1;
@@ -392,7 +391,7 @@
         private System.Windows.Forms.ToolStripMenuItem rulesToolStripMenuItem;
         private System.Windows.Forms.Button DeckButton;
         private System.Windows.Forms.PictureBox discardPile1;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox foundation1;
         private System.Windows.Forms.PictureBox hintPile1;
         private System.Windows.Forms.PictureBox hintPile2;
         private System.Windows.Forms.PictureBox hintPile3;
