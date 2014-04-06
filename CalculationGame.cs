@@ -13,14 +13,24 @@ namespace WindowsFormsApplication2
   public partial class CalculationGame : Form
   {
     //instantiate classes
-    Cards cards = new Cards();
+    Card cards = new Card();
     CardList cList = new CardList();
     Deck deck = new Deck();
     HintPile hPile = new HintPile();
     WastePile wPile = new WastePile();
-    FoundationPile fPile = new FoundationPile();
-    DiscardPile dPile = new DiscardPile();
+    FoundationPile fPile_1 = new FoundationPile();
+    FoundationPile fPile_2 = new FoundationPile();
+    FoundationPile fPile_3 = new FoundationPile();
+    FoundationPile fPile_4 = new FoundationPile();
+    DiscardPile dPile1 = new DiscardPile();
+    DiscardPile dPile2 = new DiscardPile();
+    DiscardPile dPile3 = new DiscardPile();
+    DiscardPile dPile4 = new DiscardPile();
     Random rand = new Random();
+    Point dPile1LastCardLocation;
+    Point dPile2LastCardLocation;
+    Point dPile3LastCardLocation;
+    Point dPile4LastCardLocation;
 
     private int _ticks;
 
@@ -106,11 +116,11 @@ namespace WindowsFormsApplication2
     {
       foreach (string s in System.IO.Directory.GetFiles(System.IO.Path.GetFullPath("../cards/")))
       {
-        if (!s.ToLower().Contains("Thumbs.db".ToLower()))
+        if (!s.ToLower().Contains("Thumbs.db".ToLower()) && !s.ToLower().Contains("b2fh.gif".ToLower()))
         {
           string fileName = System.IO.Path.GetFileName(s);
-          deck.AddCard(new Cards(fileName));
-          fPile.AddToPile(new Cards(fileName));
+          deck.AddCard(new Card(fileName));
+          //fPile.AddToPile(new Cards(fileName));
         }
       }
 
@@ -118,40 +128,52 @@ namespace WindowsFormsApplication2
       int fbox2 = rand.Next(13, 22); //new suite diamonds
       int fbox3 = rand.Next(26, 35); //new suit 
       int fbox4 = rand.Next(39, 48); //new suit
-      Cards card1 = deck.getCard(fbox1);
-      Cards card2 = deck.getCard(fbox2);
-      Cards card3 = deck.getCard(fbox3);
-      Cards card4 = deck.getCard(fbox4);
+      Card card1 = deck.getCard(fbox1);
+      Card card2 = deck.getCard(fbox2);
+      Card card3 = deck.getCard(fbox3);
+      Card card4 = deck.getCard(fbox4);
       deck.removeCard(card1);
       deck.removeCard(card2);
       deck.removeCard(card3);
       deck.removeCard(card4);
-      Bitmap image1 = (Bitmap)Image.FromFile(System.IO.Path.GetFullPath("../cards/" + card1.getCardName()), true);
-      Bitmap image2 = (Bitmap)Image.FromFile(System.IO.Path.GetFullPath("../cards/" + card2.getCardName()), true);
-      Bitmap image3 = (Bitmap)Image.FromFile(System.IO.Path.GetFullPath("../cards/" + card3.getCardName()), true);
-      Bitmap image4 = (Bitmap)Image.FromFile(System.IO.Path.GetFullPath("../cards/" + card4.getCardName()), true);
+      Bitmap image1 = card1.getCardImage();
+      Bitmap image2 = card2.getCardImage();
+      Bitmap image3 = card3.getCardImage();
+      Bitmap image4 = card4.getCardImage();
 
       foundation1.BackgroundImage = image1;
+      fPile_1.AddToPile(card1);
       foundation2.BackgroundImage = image2;
+      fPile_2.AddToPile(card2);
       foundation3.BackgroundImage = image3;
+      fPile_3.AddToPile(card3);
       foundation4.BackgroundImage = image4;
+      fPile_4.AddToPile(card4);
 
-      MessageBox.Show("FPile " + fPile.getCount().ToString());
+      dPile1LastCardLocation = panel1.Location;
+      dPile2LastCardLocation = panel2.Location;
+      dPile3LastCardLocation = panel3.Location;
+      dPile4LastCardLocation = panel4.Location;
+
+
+      //MessageBox.Show("FPile " + fPile.getCount().ToString());
       MessageBox.Show("Deck " + deck.getCount().ToString());
     }
 
     private void btnDeck_Click(object sender, EventArgs e)
     {
       int r = rand.Next(deck.getCount());
-      Cards card = deck.getCard(r - 1);
-      dPile.AddToPile(card);
-      deck.removeCard(card);
-      Bitmap image1 = (Bitmap)Image.FromFile(System.IO.Path.GetFullPath("../cards/" + card.getCardName()), true);
-      wastePilePicture.BackgroundImage = image1;
-
-      //Bitmap image2 = (Bitmap)Image.FromFile(System.IO.Path.GetFullPath("../cards/1.gif" + card.getCardName()), true);
-      //foundation1.BackgroundImage = image2;
+      Card card = deck.getCard(r);
+      if (card == null)
+          MessageBox.Show("There are no cards in the deck");
+      else
+      {
+          wPile.AddToPile(card);
+          deck.removeCard(card);
+          wastePilePicture.BackgroundImage = card.getCardImage();
+      }
     }
+
     private void btnDiscardPile_Click(object sender, MouseEventArgs e)
     {
     }
@@ -226,16 +248,78 @@ namespace WindowsFormsApplication2
 
     }
 
-    private void panel1_DragEnter_1(object sender, DragEventArgs e)
+    private void panel1_DragDrop(object sender, DragEventArgs e)
     {
-      e.Effect = DragDropEffects.All;
-
+        MessageBox.Show("file has been moved");
     }
 
-    private void panel1_DragDrop_1(object sender, DragEventArgs e)
+    private void panel1_DragEnter(object sender, DragEventArgs e)
     {
-      MessageBox.Show("test");
+        e.Effect = DragDropEffects.All;
+        panel1.BorderStyle = BorderStyle.FixedSingle;
+        panel1.Refresh();
+        MessageBox.Show("value is clicked");
     }
+
+    private void panel1_MouseEnter(object sender, EventArgs e)
+    {
+        panel1.BorderStyle = BorderStyle.Fixed3D;
+    }
+
+    private void panel1_MouseDown(object sender, MouseEventArgs e)
+    {
+        AddCardDiscardPile(e, panel1, dPile1, ref dPile1LastCardLocation, this.panel1_MouseDown);
+    }
+
+    private void panel2_MouseDown(object sender, MouseEventArgs e)
+    {
+        AddCardDiscardPile(e, panel2, dPile2, ref dPile2LastCardLocation, this.panel2_MouseDown);
+    }
+
+    private void panel3_MouseDown(object sender, MouseEventArgs e)
+    {
+        AddCardDiscardPile(e, panel3, dPile3, ref dPile3LastCardLocation, this.panel3_MouseDown);
+    }
+
+    private void panel4_MouseDown(object sender, MouseEventArgs e)
+    {
+        AddCardDiscardPile(e, panel4, dPile4, ref dPile4LastCardLocation, this.panel4_MouseDown);
+    }
+
+
+
+    private void AddCardDiscardPile(MouseEventArgs e, Panel sourcePanel, DiscardPile discardPile, ref Point lastLocation, MouseEventHandler methodToHandle)
+    {
+        if (e.Button == MouseButtons.Left)
+        {
+            if (wPile.getCount() > 0)
+            {
+                Card card = wPile.getLastCardInPile();
+                discardPile.AddToPile(card);
+                if (discardPile.getCount() == 1)
+                    sourcePanel.BackgroundImage = card.getCardImage();
+                else
+                {
+                    Panel p = new Panel();
+                    p.BackgroundImage = card.getCardImage();
+                    p.Height = sourcePanel.Height;
+                    p.Width = sourcePanel.Width;
+                    lastLocation.Offset(0, 20);
+                    p.Location = lastLocation;
+                    lastLocation = p.Location;
+                    p.MouseDown += new System.Windows.Forms.MouseEventHandler(methodToHandle);
+                    this.Controls.Add(p);
+                    p.BringToFront();
+                }
+
+                //Remove card from the waste pile
+                wPile.removeCard(card);
+                wastePilePicture.BackgroundImage = null;
+            }
+        }
+    }
+
+
 
   }
 }

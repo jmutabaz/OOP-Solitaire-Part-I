@@ -6,12 +6,12 @@ namespace WindowsFormsApplication2
 {
 	public class WastePile:CardPile
 	{
-		private List<Cards> pile;
+		private List<Card> pile;
 		public WastePile ()
 		{
 			//default constructor
 			//no cards in the pile
-			pile = new List<Cards>();
+			pile = new List<Card>();
 		}
 		/* <summary>
 		 * Bool isEmpty method <br>
@@ -28,7 +28,7 @@ namespace WindowsFormsApplication2
 		 * @param: Cards card
 		 * </summary>
 		 */ 
-		public override void AddToPile (Cards card)
+		public override void AddToPile (Card card)
 		{
 			if (pile.Count == 0) {
 				pile.Add (card);
@@ -44,11 +44,19 @@ namespace WindowsFormsApplication2
 			return pile.Count;
 		}
 
+        /// <summary>
+        /// Removes card from the waste pile
+        /// </summary>
+        public void removeCard(Card card)
+        {
+            pile.Remove(card);
+        }
+
 		/* <summary>
 		 * Get the last card from the pile
 		 * </summary>
 		 */ 
-		public override Cards getLastCardInPile ()
+		public override Card getLastCardInPile ()
 		{
 			return pile [pile.Count - 1];
 			//throw new NotImplementedException ();
@@ -60,7 +68,7 @@ namespace WindowsFormsApplication2
 		 * essentially removing it from the list
 		 * </summary>
 		 */ 
-		public override Cards dealACard ()
+		public override Card dealACard ()
 		{
 			//you guys can decide here if to check its empty
       if (isEmpty())
@@ -69,13 +77,13 @@ namespace WindowsFormsApplication2
       }
       else
       {
-        Cards card = pile[0];
+        Card card = pile[0];
         pile.RemoveAt(0);
         return card;
       }
 		}
 
-		public override void acceptCard(Cards card)
+		public override void acceptCard(Card card)
 		{
 			if (pile.Count != 0) {
 				pile .Insert (0, card);

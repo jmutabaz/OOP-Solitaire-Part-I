@@ -6,7 +6,7 @@ namespace WindowsFormsApplication2
 {
 	public class Deck
 	{
-		private List<Cards> cardsToBeShuffled;
+		private List<Card> cardsToBeShuffled;
     Random rand = new Random();
 		//to be evaluated at run time rather than compile-time
 		//public readonly int FINITE_MAX_LENGTH = 52; 
@@ -15,7 +15,7 @@ namespace WindowsFormsApplication2
 		{
 			//default constructor
 			//deck is empty
-			cardsToBeShuffled = new List<Cards> ();
+			cardsToBeShuffled = new List<Card> ();
 		}
 
 		public bool isEmpty ()
@@ -23,7 +23,7 @@ namespace WindowsFormsApplication2
 			return cardsToBeShuffled.Count == 0;
 		}
     
-		public void AddCard (Cards card)
+		public void AddCard (Card card)
 		{
 			cardsToBeShuffled.Add (card);
 		}
@@ -54,16 +54,19 @@ namespace WindowsFormsApplication2
 		 * to ensure no repitition of the same instance
 		 * </summary>
 		 */
-    public void removeCard(Cards card)
+    public void removeCard(Card card)
     {
       
         cardsToBeShuffled.Remove(card);
 
     }
 
-    public Cards getCard(int index)
+    public Card getCard(int index)
     {
-      return cardsToBeShuffled[index];
+        if (index >= 0 && cardsToBeShuffled.Count > 0)
+            return cardsToBeShuffled[index];
+        else
+            return null;
     }
 		
 
@@ -77,12 +80,12 @@ namespace WindowsFormsApplication2
 		public void shuffleDeck(){
 			int count = 1;
 			int cardNum;
-			Cards card;
+			Card card;
 			//int[] arr = new int[52];
 			do 
       {
 				cardNum = rand.Next (1, 52);
-				card = new Cards (cardNum + ".gif");
+				card = new Card (cardNum + ".gif");
         if (isEmpty())
         {
           AddCard(card);

@@ -23,15 +23,15 @@ namespace WindowsFormsApplication2
 		public abstract bool isEmpty ();
 
 		//will add a card to the pile
-		public abstract void AddToPile (Cards card);
+		public abstract void AddToPile (Card card);
 
 		//will return last card in the pile
-		public abstract Cards getLastCardInPile();
+		public abstract Card getLastCardInPile();
 
 		//will deal next card in the pile and remove it from pile
-		public abstract Cards dealACard();
+		public abstract Card dealACard();
 
-		public abstract void acceptCard (Cards card);
+		public abstract void acceptCard (Card card);
 	} 
 }
 

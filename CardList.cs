@@ -7,11 +7,11 @@ namespace WindowsFormsApplication2
 	public class CardList
 	{
 		//ArrayList to hold cards
-		private List<Cards> cardList;
+		private List<Card> cardList;
 
 		public CardList ()
 		{
-			cardList = new List<Cards> ();
+			cardList = new List<Card> ();
 		}
 		/* <summary>
 		 * Bool isEmpty method <br>
@@ -28,7 +28,7 @@ namespace WindowsFormsApplication2
 		 * @param: Cards card
 		 * </summary>
 		 */ 
-		public void AddCard (Cards card)
+		public void AddCard (Card card)
 		{
 			cardList.Add (card);
 			
@@ -38,7 +38,7 @@ namespace WindowsFormsApplication2
 		 * Get the bottom face up card
 		 * </summary>
 		 */ 
-		public Cards getBottomFaceUp(Cards card)
+		public Card getBottomFaceUp(Card card)
 		{
       if (!isEmpty())
       {
@@ -56,7 +56,7 @@ namespace WindowsFormsApplication2
 		 * Get the top face up card
 		 * </summary>
 		 */
-		public Cards getTopFaceUp(Cards card)
+		public Card getTopFaceUp(Card card)
 		{
       if (!isEmpty())
       {
@@ -92,7 +92,7 @@ namespace WindowsFormsApplication2
 		 * position of a list
 		 * </summary>
 		 */
-		public void acceptCard(Cards card)
+		public void acceptCard(Card card)
 		{
 			if (!isEmpty()) {
 				cardList.Insert (0, card);

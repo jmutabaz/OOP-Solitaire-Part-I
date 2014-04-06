@@ -87,7 +87,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="CardPile.cs" />
-    <Compile Include="Cards.cs" />
+    <Compile Include="Card.cs" />
     <Compile Include="CardList.cs" />
     <None Include="cards\1.gif" />
     <None Include="cards\10.gif" />
