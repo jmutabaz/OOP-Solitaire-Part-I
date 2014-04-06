@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace WindowsFormsApplication2
 {
@@ -76,54 +77,35 @@ namespace WindowsFormsApplication2
                     + " SHSH");
     }
 
-    private void toolStripButton1_Click(object sender, EventArgs e)
-    {
-
-    }
-
-    private void toolStripDropDownButton1_Click(object sender, EventArgs e)
-    {
-
-    }
-
-    private void toolStripDropDownButton2_Click(object sender, EventArgs e)
-    {
-
-    }
-
-    private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
-    {
-    }
-
-    private void pictureBox1_Click(object sender, EventArgs e)
-    {
-
-    }
-
-    private void btnDeckPicutre_Click(object sender, EventArgs e)
-    {
-      base.OnMouseClick(null);
-
-    }
-
-
-    void control_Click(object sender, EventArgs e)
-    {
-
-    }
-
     private void CalculationGame_Load(object sender, EventArgs e)
     {
-      foreach (string s in System.IO.Directory.GetFiles(System.IO.Path.GetFullPath("../cards/")))
+      //Load cards. We will use threads to speed up the way cards are loaded
+      string[]cards=System.IO.Directory.GetFiles(System.IO.Path.GetFullPath("../cards/"));
+
+      /*
+      foreach (string card in cards)
       {
-        if (!s.ToLower().Contains("Thumbs.db".ToLower()) && !s.ToLower().Contains("b2fh.gif".ToLower()))
+        if (!card.ToLower().Contains("Thumbs.db".ToLower()) && !card.ToLower().Contains("b2fh.gif".ToLower()))
         {
-          string fileName = System.IO.Path.GetFileName(s);
+          string fileName = System.IO.Path.GetFileName(card);
           deck.AddCard(new Card(fileName));
-          //fPile.AddToPile(new Cards(fileName));
         }
       }
+       */
 
+
+
+      Parallel.ForEach(cards, card =>
+        {
+          if (!card.ToLower().Contains("Thumbs.db".ToLower()) && !card.ToLower().Contains("b2fh.gif".ToLower()))
+          {
+            string fileName = System.IO.Path.GetFileName(card);
+            deck.AddCard(new Card(fileName));
+          }
+
+
+        });
+       
       int fbox1 = 0;//A of clubs
       int fbox2 = rand.Next(13, 22); //new suite diamonds
       int fbox3 = rand.Next(26, 35); //new suit 
@@ -155,9 +137,15 @@ namespace WindowsFormsApplication2
       dPile3LastCardLocation = panel3.Location;
       dPile4LastCardLocation = panel4.Location;
 
+      textBox1.Text = "2 3 4 5 6 7 8 9 10 J Q K";
+      textBox2.Text = "4 6 8 10 Q A 3 5 7 9 J K";
+      textBox3.Text = "6 9 Q 2 5 8 J A 4 7 10 K";
+      textBox4.Text = "8 Q 3 7 J 2 6 10 A 5 9 K";
+
+
 
       //MessageBox.Show("FPile " + fPile.getCount().ToString());
-      MessageBox.Show("Deck " + deck.getCount().ToString());
+      //MessageBox.Show("Deck " + deck.getCount().ToString());
     }
 
     private void btnDeck_Click(object sender, EventArgs e)
@@ -172,93 +160,6 @@ namespace WindowsFormsApplication2
           deck.removeCard(card);
           wastePilePicture.BackgroundImage = card.getCardImage();
       }
-    }
-
-    private void btnDiscardPile_Click(object sender, MouseEventArgs e)
-    {
-    }
-
-    private void btnFoundPile1_Click_1(object sender, EventArgs e)
-    {
-      deck.removeCard(cards);
-      Bitmap image1 = (Bitmap)Image.FromFile(System.IO.Path.GetFullPath("../cards/1.gif" + cards.getCardName()), true);
-      foundation1.BackgroundImage = image1;
-    }
-
-    private void btnFoundPile2_Click(object sender, EventArgs e)
-    {
-
-    }
-
-    private void btnFoundPile3_Click(object sender, EventArgs e)
-    {
-
-    }
-
-    private void btnFoundPile4_Click(object sender, EventArgs e)
-    {
-
-    }
-
-
-    private void hintPile1_Click(object sender, EventArgs e)
-    {
-
-      MessageBox.Show("A 2 3 4 5 6 7"
-                     + "\n8 9 10 J Q K");
-
-    }
-
-    private void hintPile2_Click(object sender, EventArgs e)
-    {
-      //this is the hintPile1_Click pile
-      MessageBox.Show("2 4 6 8 10 Q"
-                     + "\nA 3 5 7 9 J K");
-    }
-
-    private void hintPile3_Click(object sender, EventArgs e)
-    {
-      MessageBox.Show("3 6 9 Q 2 5 8"
-                     + "\nJ A 4 7 10 K");
-    }
-
-    private void hintPile4_Click(object sender, EventArgs e)
-    {
-      //MessageBox.Show = "click here for hint";
-
-    }
-
-    private void discardPile1_onClick(object sender, EventArgs e)
-    {
-
-    }
-
-    private void discardPile2_onClick(object sender, EventArgs e)
-    {
-
-    }
-
-    private void discardPile3_onClick(object sender, EventArgs e)
-    {
-
-    }
-
-    private void discardPile4_onClick(object sender, EventArgs e)
-    {
-
-    }
-
-    private void panel1_DragDrop(object sender, DragEventArgs e)
-    {
-        MessageBox.Show("file has been moved");
-    }
-
-    private void panel1_DragEnter(object sender, DragEventArgs e)
-    {
-        e.Effect = DragDropEffects.All;
-        panel1.BorderStyle = BorderStyle.FixedSingle;
-        panel1.Refresh();
-        MessageBox.Show("value is clicked");
     }
 
     private void panel1_MouseEnter(object sender, EventArgs e)
