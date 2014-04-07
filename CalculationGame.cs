@@ -105,8 +105,8 @@ namespace WindowsFormsApplication2
 
 
         });
-       
-      int fbox1 = 0;//A of clubs
+      
+      /*int fbox1 = 0;//A of clubs
       int fbox2 = rand.Next(13, 22); //new suite diamonds
       int fbox3 = rand.Next(26, 35); //new suit 
       int fbox4 = rand.Next(39, 48); //new suit
@@ -114,10 +114,7 @@ namespace WindowsFormsApplication2
       Card card2 = deck.getCard(fbox2);
       Card card3 = deck.getCard(fbox3);
       Card card4 = deck.getCard(fbox4);
-      deck.removeCard(card1);
-      deck.removeCard(card2);
-      deck.removeCard(card3);
-      deck.removeCard(card4);
+      
       Bitmap image1 = card1.getCardImage();
       Bitmap image2 = card2.getCardImage();
       Bitmap image3 = card3.getCardImage();
@@ -131,6 +128,11 @@ namespace WindowsFormsApplication2
       fPile_3.AddToPile(card3);
       foundation4.BackgroundImage = image4;
       fPile_4.AddToPile(card4);
+
+      deck.removeCard(card1);
+      deck.removeCard(card2);
+      deck.removeCard(card3);
+      deck.removeCard(card4);*/
 
       dPile1LastCardLocation = panel1.Location;
       dPile2LastCardLocation = panel2.Location;
@@ -218,6 +220,11 @@ namespace WindowsFormsApplication2
                 wastePilePicture.BackgroundImage = null;
             }
         }
+    }
+
+    private void foundation4_Click(object sender, EventArgs e)
+    {
+
     }
 
 

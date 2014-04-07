@@ -68,7 +68,6 @@ namespace WindowsFormsApplication2
         else
             return null;
     }
-		
 
 		/* <summary>
 		 * Adds to the pile and shuffles the deck <br>
@@ -84,7 +83,7 @@ namespace WindowsFormsApplication2
 			//int[] arr = new int[52];
 			do 
       {
-				cardNum = rand.Next (1, 52);
+				cardNum = rand.Next (1, 48);
 				card = new Card (cardNum + ".gif");
         if (isEmpty())
         {
@@ -94,7 +93,7 @@ namespace WindowsFormsApplication2
         {
           ; //do nothing
         }
-			} while(count <= 52);
+			} while(count <= 48);
 			Shuffle(cardsToBeShuffled);
 		}
 

@@ -66,3 +66,13 @@ C:\Users\John\Desktop\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplication2.Pr
 C:\Users\John\Desktop\OOP-Solitaire-Part-I\obj\Debug\Calculation Solitaire Form.csproj.GenerateResource.Cache
 C:\Users\John\Desktop\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplication2.exe
 C:\Users\John\Desktop\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\Andrew\Documents\GitHub\OOP-Solitaire-Part-I\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\Andrew\Documents\GitHub\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\Andrew\Documents\GitHub\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\Andrew\Documents\GitHub\OOP-Solitaire-Part-I\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\Andrew\Documents\GitHub\OOP-Solitaire-Part-I\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\Andrew\Documents\GitHub\OOP-Solitaire-Part-I\obj\Debug\Calculation Solitaire Form.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\Documents\GitHub\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplication2.CalculationMenu.resources
+C:\Users\Andrew\Documents\GitHub\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplication2.CalculationGame.resources
+C:\Users\Andrew\Documents\GitHub\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\Andrew\Documents\GitHub\OOP-Solitaire-Part-I\obj\Debug\Calculation Solitaire Form.csproj.GenerateResource.Cache
