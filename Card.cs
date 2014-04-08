@@ -24,13 +24,13 @@ namespace WindowsFormsApplication2
       this.cardImage = (Bitmap)Image.FromFile(System.IO.Path.GetFullPath("../cards/" + name), true);
       switch (name)
       {
-        /*case "1.gif":
+        case "1.gif":
           //A of clubs - black
           number = "A";
           color = "black";
           suit = "club";
           faceUp = false;
-          break;*/
+          break;
         case "2.gif":
           //2 of clubs - black
           number = "2";
@@ -129,7 +129,7 @@ namespace WindowsFormsApplication2
           suit = "diamond";
           faceUp = false;
           break;
-        /*case "16.gif":
+        case "16.gif":
           //2 of diamonds - red
           number = "2";
           color = "red";
@@ -149,7 +149,7 @@ namespace WindowsFormsApplication2
           color = "red";
           suit = "diamond";
           faceUp = false;
-          break;*/
+          break;
         case "19.gif":
           //5 of diamonds - red
           number = "5";

@@ -67,7 +67,7 @@ namespace WindowsFormsApplication2
             return cardsToBeShuffled[index];
         else
             return null;
-    }
+     }
 
 		/* <summary>
 		 * Adds to the pile and shuffles the deck <br>
@@ -93,7 +93,7 @@ namespace WindowsFormsApplication2
         {
           ; //do nothing
         }
-			} while(count <= 48);
+			} while(count <= 52);
 			Shuffle(cardsToBeShuffled);
 		}
 
