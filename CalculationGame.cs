@@ -106,15 +106,10 @@ namespace WindowsFormsApplication2
 
         });
 
-      int fbox1 = 0;//A of clubs
-      int fbox2 = 7; //new suite diamonds
-      int fbox3 = 22; //new suit 
-      int fbox4 = 38; //new suit
-
-      Card card1 = deck.getCard(fbox1);
-      Card card2 = deck.getCard(fbox2);
-      Card card3 = deck.getCard(fbox3);
-      Card card4 = deck.getCard(fbox4);
+      Card card1 = new Card("1.gif");
+      Card card2 = new Card ("16.gif");
+      Card card3 = new Card("30.gif"); ;
+      Card card4 = new Card("44.gif"); 
 
       Bitmap image1 = card1.getCardImage();
       Bitmap image2 = card2.getCardImage();
@@ -134,8 +129,6 @@ namespace WindowsFormsApplication2
       deck.removeCard(card2);
       deck.removeCard(card3);
       deck.removeCard(card4);
-      
-      
 
       dPile1LastCardLocation = panel1.Location;
       dPile2LastCardLocation = panel2.Location;
@@ -146,8 +139,6 @@ namespace WindowsFormsApplication2
       textBox2.Text = "4 6 8 10 Q A 3 5 7 9 J K";
       textBox3.Text = "6 9 Q 2 5 8 J A 4 7 10 K";
       textBox4.Text = "8 Q 3 7 J 2 6 10 A 5 9 K";
-
-
 
       //MessageBox.Show("FPile " + fPile.getCount().ToString());
       //MessageBox.Show("Deck " + deck.getCount().ToString());

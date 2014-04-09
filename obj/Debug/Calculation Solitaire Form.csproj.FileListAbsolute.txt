@@ -75,3 +75,4 @@ C:\Users\John\Documents\GitHub\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplic
 C:\Users\John\Documents\GitHub\OOP-Solitaire-Part-I\obj\Debug\Calculation Solitaire Form.csproj.GenerateResource.Cache
 C:\Users\John\Documents\GitHub\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplication2.exe
 C:\Users\John\Documents\GitHub\OOP-Solitaire-Part-I\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\John\Documents\GitHub\OOP-Solitaire-Part-I\obj\Debug\Calculation Solitaire Form.csprojResolveAssemblyReference.cache
